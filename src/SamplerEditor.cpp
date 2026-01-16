@@ -992,13 +992,14 @@ void SamplerEditor::saveLastJsonFile(const File& file)
     // Create parent directory if it doesn't exist
     settingsFile.getParentDirectory().createDirectory();
 
-    // Write the file path to settings
-    std::unique_ptr<FileOutputStream> outputStream(settingsFile.createOutputStream());
-    if (outputStream != nullptr)
+    // Delete existing file first to avoid appending
+    if (settingsFile.exists())
+        settingsFile.deleteFile();
+
+    // Write the file path to settings (overwrite mode)
+    bool success = settingsFile.replaceWithText(file.getFullPathName());
+    if (success)
     {
-        outputStream->write(file.getFullPathName().toRawUTF8(), file.getFullPathName().length());
-        outputStream->flush();
-        outputStream.reset();
         DEBUG_MIDI(String("Saved last JSON file: ") + file.getFullPathName());
     }
     else
