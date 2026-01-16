@@ -2,6 +2,8 @@
 
 A 16-Button MIDI Sampler built with JUCE framework. Trigger samples using MIDI input or by clicking buttons in the UI.
 
+[View on GitHub](https://github.com/camenduru/TostEngine-juce-pocket-sampler)
+
 ## Features
 
 ### Core Functionality
@@ -18,6 +20,13 @@ A 16-Button MIDI Sampler built with JUCE framework. Trigger samples using MIDI i
 
 ### Supported Formats
 - WAV, AIFF, FLAC, and other formats supported by JUCE audio formats
+
+## Settings
+
+Access settings via the **Settings** menu in the application title bar:
+
+- **Audio & MIDI Settings...** - Configure audio device and MIDI input/output devices
+- **GitHub Repository...** - Open the project page on GitHub
 
 ## How to Build
 

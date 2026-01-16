@@ -262,8 +262,8 @@ SamplerEditor::SamplerEditor(SamplerPlugin& plugin)
     noteVelocities.resize(128);
     noteVelocities.fill(0.0f);
 
-    setSize(500, 545);
-    DEBUG_MIDI("SamplerEditor: setSize to 500x545");
+    setSize(500, 560);
+    DEBUG_MIDI("SamplerEditor: setSize to 500x560");
 
     // MIDI Learn button at top
     midiLearnButton.setButtonText("MIDI Learn");
@@ -306,7 +306,7 @@ SamplerEditor::SamplerEditor(SamplerPlugin& plugin)
     // MIDI Learn status label
     midiLearnLabel.setText("One-Shot: ON - samples play to end", NotificationType::dontSendNotification);
     midiLearnLabel.setColour(Label::textColourId, Colours::yellow);
-    midiLearnLabel.setBounds(15, 515, 470, 22);  // Moved below status bar
+    midiLearnLabel.setBounds(15, 536, 470, 22);  // Below status bar
     addAndMakeVisible(&midiLearnLabel);
     DEBUG_MIDI("SamplerEditor: added MIDI Learn label");
 
@@ -334,9 +334,9 @@ SamplerEditor::SamplerEditor(SamplerPlugin& plugin)
     }
     DEBUG_MIDI("SamplerEditor: created " + String(buttons.size()) + " buttons");
 
-    // Add MIDI status display at bottom (below pads)
-    // Pads end at Y=510, so status starts at 515
-    midiStatus.setBounds(15, 515, 470, 24);
+    // Add MIDI status display at bottom (right after pads)
+    // Pads end at Y=510
+    midiStatus.setBounds(15, 510, 470, 24);
     addAndMakeVisible(midiStatus);
     DEBUG_MIDI("SamplerEditor: added MIDI status display");
 

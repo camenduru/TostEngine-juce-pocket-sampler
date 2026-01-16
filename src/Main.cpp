@@ -121,7 +121,7 @@ public:
             {
                 editor = std::unique_ptr<AudioProcessorEditor>(editorPtr);
                 setContentOwned(editor.get(), true);
-                editor->setSize(500, 610);
+                editor->setSize(500, 560);
             }
 
             // Prepare the plugin for playback (44100 Hz sample rate, 512 samples per block)
@@ -268,6 +268,10 @@ public:
                 PopupMenu::Item settingsItem("Audio & MIDI Settings...");
                 settingsItem.action = [this]() { showSettings(); };
                 menu.addItem(settingsItem);
+
+                PopupMenu::Item githubItem("GitHub Repository...");
+                githubItem.action = [this]() { URL("https://github.com/camenduru/TostEngine-juce-pocket-sampler").launchInDefaultBrowser(); };
+                menu.addItem(githubItem);
             }
 
             return menu;
