@@ -1,0 +1,38 @@
+# JUCE/TostEngineJucePocketSampler gitignore
+
+# Build directories
+build/
+TostEngineJucePocketSampler_artefacts/
+
+# Visual Studio
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.opensdf
+*.sdf
+*.suo
+ipch/
+Debug/
+Release/
+x64/
+Win32/
+
+# JUCE generated
+JuceLibraryCode/
+
+# User settings
+*.settings
+
+# Backup files
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+nul
