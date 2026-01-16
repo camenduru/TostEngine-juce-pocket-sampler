@@ -2,7 +2,7 @@
 
 A 16-Button MIDI Sampler built with JUCE framework. Trigger samples using MIDI input or by clicking buttons in the UI.
 
-![Screenshot 2026-01-16 162614](https://github.com/user-attachments/assets/b42c8562-1314-4ae8-8d8f-2a423e29a30a)
+![Screenshot 2026-01-16 165536](https://github.com/user-attachments/assets/71e514e8-7c31-4cb3-960c-138fd04b0eb4)
 
 ## Features
 
@@ -104,4 +104,5 @@ The application automatically opens all available MIDI input devices on startup.
 ## License
 
 MIT License
+
 
